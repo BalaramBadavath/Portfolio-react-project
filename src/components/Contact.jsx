@@ -113,9 +113,7 @@ const Contact = () => {
       },
       body: json
     }).then((res) => res.json());
-    if(res.success){
-      console.log(res.success)
-    }
+    window.location.reload()
   };
 
   return (
@@ -135,7 +133,7 @@ const Contact = () => {
           <textarea rows='4' cols='4' type="text" placeholder='Type your message here' name='message' className='w-full px-3 py-2 border rounded-lg bg-gray-800 focus:border-blue-500' required />
         </div>
         <div className='flex justify-center'>
-          <button onClick={()=>{window.location.reload()}} type='submit' className='bg-pink-500 text-white font-semibold px-4 py-2 rounded-lg hover:bg-pink-500 focus:outline-white'>Send Message</button>
+          <button type='submit' className='bg-pink-500 text-white font-semibold px-4 py-2 rounded-lg hover:bg-pink-500 focus:outline-white'>Send Message</button>
         </div>
       </form>
     </div>
