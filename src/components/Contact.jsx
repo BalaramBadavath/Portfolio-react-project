@@ -113,7 +113,9 @@ const Contact = () => {
       },
       body: json
     }).then((res) => res.json());
-
+    if(res.success){
+      console.log(res.success)
+    }
   };
 
   return (
